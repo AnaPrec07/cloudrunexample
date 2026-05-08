@@ -1,0 +1,30 @@
+# ── Core HTTP framework ────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1        # [standard] includes httptools + uvloop for performance
+pydantic==2.9.2
+
+# ── Google Cloud SDKs ──────────────────────────────────────────────────────────
+# google-cloud-aiplatform includes the vertexai module (GenerativeModel etc.)
+google-cloud-aiplatform==1.75.0
+google-cloud-firestore==2.19.0
+google-cloud-monitoring==2.23.0
+google-cloud-dlp==3.21.0         # optional; only used if USE_CLOUD_DLP=true
+
+# ── Auth ───────────────────────────────────────────────────────────────────────
+google-auth==2.36.0
+google-auth-httplib2==0.2.0
+
+# ── Observability ─────────────────────────────────────────────────────────────
+# opentelemetry-exporter-gcp-trace is the Google-maintained OTel Cloud Trace exporter
+opentelemetry-api==1.29.0
+opentelemetry-sdk==1.29.0
+opentelemetry-exporter-gcp-trace==1.9.0
+
+# ── HTTP client (async, used for Model Armor calls) ────────────────────────────
+httpx==0.27.2
+
+# ── Retry logic ───────────────────────────────────────────────────────────────
+tenacity==9.0.0
+
+# ── Local dev only (load .env file) ───────────────────────────────────────────
+python-dotenv==1.0.1
